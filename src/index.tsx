@@ -3,13 +3,16 @@ import React, { useEffect, useState } from "react";
 
 export default function Age({ birthdate }: { birthdate: string }) {
     const [age, setAge] = useState<number | null>(null);
-    const effectiveBirthdate = process.env.NEXT_PUBLIC_BIRTHDATE || "" || birthdate;
+    const effectiveBirthdate = birthdate || process.env.NEXT_PUBLIC_BIRTHDATE || "";
 
     useEffect(() => {
         const fetchAge = async () => {
-        const calculatedAge = await calculateAge(effectiveBirthdate);
-        setAge(calculatedAge);
-    };
+            if(effectiveBirthdate === "") {
+                throw new Error("I didn't get a birthdate, \nset one on the enviroment variable or ad the \"birthdate\" argument")
+            }
+            const calculatedAge = await calculateAge(effectiveBirthdate);
+            setAge(calculatedAge);
+        };
 
         fetchAge();
     }, [effectiveBirthdate]);
