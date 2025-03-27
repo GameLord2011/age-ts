@@ -1,4 +1,4 @@
-# Age.js
+# Age.ts
 
 This is a simple NextJs component that calculates your age.
 
