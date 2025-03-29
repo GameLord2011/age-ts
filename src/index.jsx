@@ -2,8 +2,8 @@ import { calculateAge } from "./calcage";
 import React, { useEffect, useState } from "react";
 
 /**
-* @param {string} [birthdate] - The birthdate in YYYY-MM-DD format.
-* @returns {string} - A promise that resolves to the age in years.
+* @param {string|null} [birthdate] - The birthdate in YYYY-MM-DD format.
+* @returns {string} - The age in years.
 * @description - This function calculates the age based on the provided birthdate.
 */
 
