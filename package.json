@@ -1,5 +1,5 @@
 {
-  "name": "age-ts",
+  "name": "age-js",
   "version": "0.0.2",
   "description": "A simple React component that calculates your age",
   "main": "dist/index.js",
@@ -14,12 +14,12 @@
   "license": "MIT",
   "dependencies": {
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "typescript": "^5.8.2",
-    "@types/react": "^19.0.12",
-    "@types/node": "^22.13.13"
+    "react-dom": "^17.0.2"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "esbuild src/index.js --bundle --outfile=dist/index.js"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.1"
   }
 }

@@ -1,8 +1,8 @@
 import { calculateAge } from "./calcage";
 import React, { useEffect, useState } from "react";
 
-export default function Age({ birthdate }: { birthdate: string }) {
-    const [age, setAge] = useState<number | null>(null);
+export default function Age(birthdate) {
+    const [age, setAge] = useState(null);
     const effectiveBirthdate = birthdate || process.env.NEXT_PUBLIC_BIRTHDATE || "";
 
     useEffect(() => {

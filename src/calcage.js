@@ -1,4 +1,10 @@
-export const calculateAge = async (birthdate: string): Promise<number> => {
+/**
+* @param {string} birthdate - The birthdate in YYYY-MM-DD format.
+* @returns {Promise<number>} - A promise that resolves to the age in years.
+* @description - This function calculates the age based on the provided birthdate.
+*/
+
+export const calculateAge = async (birthdate) => {
     return new Promise((resolve) => {
       const birthDate = new Date(birthdate);
       const today = new Date();
