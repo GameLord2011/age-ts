@@ -1,4 +1,4 @@
-export const calculateAge = async (birthdate) => {
+export const calculateAge = async ({ birthdate }: { birthdate: string }) => {
     return new Promise((resolve) => {
       const birthDate = new Date(birthdate);
       const today = new Date();
