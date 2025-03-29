@@ -15,7 +15,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm i
+      - run: corepack enable
+      - run: pnpm install
 
   publish-npm:
     needs: build
@@ -26,7 +27,8 @@ jobs:
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
-      - run: npm i
+      - run: corepack enable
+      - run: pnpm install
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
