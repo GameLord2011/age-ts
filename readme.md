@@ -7,19 +7,19 @@ This is a simple NextJs component that calculates your age.
 Install the package via npm:
 
 ```bash
-npm install age-js
+npm install @gamelord2011/age-js
 ```
 
 pnpm:
 
 ```bash
-pnpm i age-js
+pnpm i @gamelord2011/age-js
 ```
 
 or yarn:
 
 ```bash
-yarn add age-js
+yarn add @gamelord2011/age-js
 ```
 
 ## Usage
@@ -29,7 +29,7 @@ Import the `Age` component and use it in your NextJS application:
 ```tsx
 "use-client";
 
-import Age from "age-js";
+import Age from "@gamelord2011/age-js";
 
 function App() {
   return <Age />;
