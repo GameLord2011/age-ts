@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 
 export default function Age({ birthdate }: { birthdate?: string }) {
     const [age, setAge] = useState<number | null>(null);
-    const effectiveBirthdate = birthdate || process.env.NEXT_PUBLIC_BIRTHDATE || "";
+    const effectiveBirthdate = birthdate || "";
 
     useEffect(() => {
         const fetchAge = async () => {
