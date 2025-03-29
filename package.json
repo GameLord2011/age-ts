@@ -1,6 +1,6 @@
 {
   "name": "@gamelord2011/age-js",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A simple React component that calculates your age",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -20,6 +20,6 @@
     "build": "esbuild src/index.jsx --bundle --outfile=dist/index.js --external:react --external:react-dom"
   },
   "devDependencies": {
-    "esbuild": "0.25.1"
+    "esbuild": ">=0.25.1"
   }
 }
