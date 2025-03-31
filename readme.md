@@ -1,4 +1,4 @@
-# Age.js
+# Age.ts
 
 This is a simple NextJs component that calculates your age.
 
@@ -7,19 +7,19 @@ This is a simple NextJs component that calculates your age.
 Install the package via npm:
 
 ```bash
-npm install @gamelord2011/age-js
+npm install age-ts
 ```
 
 pnpm:
 
 ```bash
-pnpm i @gamelord2011/age-js
+pnpm i age-ts
 ```
 
 or yarn:
 
 ```bash
-yarn add @gamelord2011/age-js
+yarn add age-ts
 ```
 
 ## Usage
@@ -29,7 +29,7 @@ Import the `Age` component and use it in your NextJS application:
 ```tsx
 "use-client";
 
-import Age from "@gamelord2011/age-js";
+import Age from "age-ts";
 
 function App() {
   return <Age />;
@@ -46,4 +46,16 @@ Set the `BIRTHDATE` environment variable in the following format:
 NEXT_PUBLIC_BIRTHDATE = '<your birthdate here>'
 ```
 
-Or just pass the birthdate argument through the component.
+Or just pass the `birthdate` argument through the component like this:
+
+```tsx
+"use-client";
+
+import Age from "age-ts";
+
+function App() {
+  return <Age birthdate='01-01-2001' />;
+}
+
+export default App;
+```
