@@ -1,7 +1,7 @@
 import { calculateAge } from "./calcage";
 import React, { useEffect, useState } from "react";
 
-export default function Age({ birthdate }: { birthdate?: string }) {
+export default function Age({ birthdate, impress_the_girls_mode }: { birthdate?: string, impress_the_girls_mode?: boolean }) {
     const [age, setAge] = useState<number | null>(null);
     const effectiveBirthdate = process.env.NEXT_PUBLIC_BIRTHDATE || birthdate || "";
 
@@ -10,7 +10,10 @@ export default function Age({ birthdate }: { birthdate?: string }) {
             if(effectiveBirthdate === "") {
                 throw new Error("I didn't get a birthdate, \nset one on the enviroment variable or ad the \"birthdate\" argument")
             }
-            const calculatedAge = await calculateAge({ birthdate: effectiveBirthdate }) as number;
+            let calculatedAge = await calculateAge({ birthdate: effectiveBirthdate }) as number;
+            if(impress_the_girls_mode){
+                calculatedAge++;
+            }
             setAge(calculatedAge);
         };
 
