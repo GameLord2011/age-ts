@@ -1,6 +1,6 @@
 {
   "name": "age-ts",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A simple React component that calculates your age",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -13,15 +13,15 @@
   "author": "GameLord2011",
   "license": "MIT",
   "dependencies": {
-    "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
   },
   "scripts": {
     "build": "tsc"
   },
   "devDependencies": {
-    "@types/node": "22.14.1",
-    "@types/react": "19.1.2",
+    "@types/node": "24.8.1",
+    "@types/react": "19.2.2",
     "typescript": "5.8.3"
   }
 }

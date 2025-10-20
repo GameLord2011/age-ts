@@ -1,5 +1,8 @@
 import { calculateAge } from "./calcage";
-import React, { useEffect, useState } from "react";
+import React  from "react";
+import { useEffect } from "react";
+import { useState } from "react";
+import { startTransition } from "react";
 
 export default function Age({ birthdate, impress_the_girls_mode }: { birthdate?: string, impress_the_girls_mode?: boolean }) {
     const [age, setAge] = useState<number | null>(null);
@@ -14,7 +17,9 @@ export default function Age({ birthdate, impress_the_girls_mode }: { birthdate?:
             if(impress_the_girls_mode){
                 calculatedAge++;
             }
-            setAge(calculatedAge);
+            startTransition(() => {
+                setAge(calculatedAge);
+            });
         };
 
         fetchAge();

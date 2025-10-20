@@ -15,4 +15,3 @@ export const calculateAge = async ({ birthdate }: { birthdate: string }) => {
       resolve(age);
     });
 };
-  
